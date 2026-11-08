@@ -71,6 +71,13 @@ export const router = createBrowserRouter([
             })),
     },
     {
+        path: ROUTES.register,
+        lazy: () =>
+            import("@modules/auth-context/ui/router").then((m) => ({
+                Component: m.RegisterPage,
+            })),
+    },
+    {
         path: "/",
         Component: PrivateRoute,
         children: [

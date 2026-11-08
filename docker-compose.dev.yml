@@ -12,7 +12,9 @@ services:
     environment:
       VITE_HOST: 0.0.0.0
       VITE_PORT: 5173
-      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:18080}
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:15173}
+      API_BASE_URL: http://host.docker.internal:8082
+      INVOICING_API_BASE_URL: http://host.docker.internal:8083
       CHOKIDAR_USEPOLLING: "true"
     ports:
       - "${FRONTEND_HOST_PORT:-15173}:5173"

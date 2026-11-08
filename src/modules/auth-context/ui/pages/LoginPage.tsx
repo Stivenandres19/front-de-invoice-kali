@@ -75,7 +75,7 @@ export const LoginPage = () => {
                     <div className="mb-6">
                         <h2 className="text-3xl font-bold text-gray-900 m-0 mb-2 tracking-tight">Inicio de sesión</h2>
                         <p className="text-gray-600 m-0 text-base">
-                            ¿Aún no tienes una cuenta? <a href="#" className="font-semibold transition-colors" style={{ color: "#0066FF", textDecoration: "none" }} onMouseOver={e => e.currentTarget.style.color = "#2563EB"} onMouseOut={e => e.currentTarget.style.color = "#0066FF"}>Créala aquí</a>
+                            ¿Aún no tienes una cuenta? <a href="/register" className="font-semibold transition-colors" style={{ color: "#0066FF", textDecoration: "none" }} onMouseOver={e => e.currentTarget.style.color = "#2563EB"} onMouseOut={e => e.currentTarget.style.color = "#0066FF"}>Créala aquí</a>
                         </p>
                     </div>
 

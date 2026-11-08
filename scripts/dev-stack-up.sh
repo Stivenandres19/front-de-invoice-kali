@@ -5,11 +5,11 @@ ROOT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
 STACK_ENV_FILE="$ROOT_DIR/.env.stack"
 
 # Defaults
-AUTH_PROJECT_PATH="../kali-auth-context"
+AUTH_PROJECT_PATH="../Copia de INVOICEKALI_AUTH_AA5_EV03/kali-auth-context"
 AUTH_COMPOSE_FILE="docker-compose.dev.yml"
 AUTH_ENV_FILE=".env.dev"
 
-INVOICING_PROJECT_PATH="../kali-invoice-service"
+INVOICING_PROJECT_PATH="../INVOICEKALI_BILL_AA5_EV03"
 INVOICING_COMPOSE_FILE="docker-compose.debug.yml"
 INVOICING_ENV_FILE=".env.dev"
 

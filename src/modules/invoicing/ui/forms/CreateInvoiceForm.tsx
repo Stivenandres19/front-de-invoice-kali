@@ -84,12 +84,12 @@ export const CreateInvoiceForm = ({
 
     const form = useZodForm<CreateInvoiceFormValues>(createInvoiceSchema, {
         defaultValues: {
-            customerId: "",
+            customerId: crypto.randomUUID(),
             issueDate: "",
             dueDate: "",
             items: [
                 {
-                    itemId: "",
+                    itemId: crypto.randomUUID(),
                     quantity: 1,
                     unitPrice: 0,
                     taxes: [{ code: "IVA", kind: "DEBIT", rate: 18 }],
@@ -106,12 +106,12 @@ export const CreateInvoiceForm = ({
     useEffect(() => {
         if (!invoiceToEdit) {
             form.reset({
-                customerId: "",
+                customerId: crypto.randomUUID(),
                 issueDate: "",
                 dueDate: "",
                 items: [
                     {
-                        itemId: "",
+                        itemId: crypto.randomUUID(),
                         quantity: 1,
                         unitPrice: 0,
                         taxes: [{ code: "IVA", kind: "DEBIT", rate: 18 }],
@@ -289,7 +289,7 @@ export const CreateInvoiceForm = ({
                     {!isEditMode && (
                         <button
                             type="button"
-                            onClick={() => itemsArray.append({ itemId: "", quantity: 1, unitPrice: 0, taxes: [{ code: "IVA", kind: "DEBIT", rate: 18 }] })}
+                            onClick={() => itemsArray.append({ itemId: crypto.randomUUID(), quantity: 1, unitPrice: 0, taxes: [{ code: "IVA", kind: "DEBIT", rate: 18 }] })}
                             style={{ backgroundColor: "#F5F3FF", color: "#3B82F6", border: "1px solid #DDD6FE", borderRadius: "6px", padding: "0.35rem 0.75rem", fontSize: "0.78rem", fontWeight: 600, cursor: "pointer", display: "flex", alignItems: "center", gap: "0.35rem" }}
                         >
                             <i className="pi pi-plus" style={{ fontSize: "0.7rem" }}></i>
